@@ -22,7 +22,7 @@ Bundler.require(*Rails.groups)
 module GyakutenCloneGroup
   class Application < Rails::Application
     config.load_defaults 6.0
-    config.i18n.default_locale = :ja
+    
     config.generators.system_tests = nil
     #時間を東京に設定
     config.time_zone = "Tokyo"
