@@ -5,3 +5,11 @@ main {
   margin: 0 auto;
   padding: 1rem;
 }
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
