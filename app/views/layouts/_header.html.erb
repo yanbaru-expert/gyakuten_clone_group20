@@ -1,8 +1,48 @@
-<div class="head">
-  <% if user_signed_in? %>
-    <%= link_to "ログアウト",destroy_user_session_path, method: :delete%>
-  <% else %>
-    <%= link_to "新規登録",new_user_registration_path%>
-    <%= link_to "ログイン",new_user_session_path%>
-  <% end %>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#5D99FF;">
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <a class="navbar-brand" id="log" href="#">Gyakuten</a>
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Rails
+       </a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+         <a class="dropdown-item" id="drop" href="#">動画教材</a>
+         <a class="dropdown-item" id="drop" href="#">テキスト教材</a>
+         <a class="dropdown-item" id="drop" href="#">ライブコーディング</a>
+         <a class="dropdown-item" id="drop" href="#">質問集</a>
+       </div>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" href="#">AWS講座</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" href="#">PHP講座</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" href="#">対談</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" href="#">情報発信</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" href="#">動画編集講座</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" href="#">ライティング講座</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" href="#">LINE＠</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" id="item" data-method="delete" href="/users/sign_out">ログアウト</a>
+     </li>
+      <li class="nav-item">
+        <a class="nav-link" id="item" href="/users/sign_up">新規登録</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="item" href="/users/sign_in">ログイン</a>
+      </li>
+    </ul>
+  </div>
+</nav>
