@@ -14,13 +14,12 @@ main {
   @extend .alert-danger;
 }
 
-<<<<<<< HEAD
 .container-login {
   @extend .container-fluid;
   max-width: 350px;
   padding: 1rem;
 }
-=======
+
 nav {
   padding: 8px;
   text-align: center;
@@ -44,4 +43,3 @@ nav #log{
 nav .dropdown-item{
   color: #007bff;
 }
->>>>>>> master
