@@ -14,8 +14,34 @@ main {
   @extend .alert-danger;
 }
 
+<<<<<<< HEAD
 .container-login {
   @extend .container-fluid;
   max-width: 350px;
   padding: 1rem;
 }
+=======
+nav {
+  padding: 8px;
+  text-align: center;
+}
+
+nav a{
+  font-size: 18px;
+}
+
+.navbar-nav .nav-link{
+  color: white;
+  margin: 0 7px;
+}
+
+nav #log{
+  font-size: 30px;
+  margin-right: 60px;
+  color: white;
+}
+
+nav .dropdown-item{
+  color: #007bff;
+}
+>>>>>>> master
