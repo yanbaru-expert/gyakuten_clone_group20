@@ -14,9 +14,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'pry-byebug'
 gem 'pry-doc'
 gem 'pry-rails'
-gem 'rails-i18n'
-gem 'devise-i18n'
-gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
