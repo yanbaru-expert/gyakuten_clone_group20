@@ -13,3 +13,9 @@ main {
 .alert-alert {
   @extend .alert-danger;
 }
+
+.container-login {
+  @extend .container-fluid;
+  max-width: 350px;
+  padding: 1rem;
+}
