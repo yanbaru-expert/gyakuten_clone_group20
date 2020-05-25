@@ -13,3 +13,27 @@ main {
 .alert-alert {
   @extend .alert-danger;
 }
+
+nav {
+  padding: 8px;
+  text-align: center;
+}
+
+nav a{
+  font-size: 18px;
+}
+
+.navbar-nav .nav-link{
+  color: white;
+  margin: 0 7px;
+}
+
+nav #log{
+  font-size: 30px;
+  margin-right: 60px;
+  color: white;
+}
+
+nav .dropdown-item{
+  color: #007bff;
+}
