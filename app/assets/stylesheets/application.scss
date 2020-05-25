@@ -23,16 +23,17 @@ nav a{
   font-size: 18px;
 }
 
+.navbar-nav .nav-link{
+  color: white;
+  margin: 0 7px;
+}
+
 nav #log{
   font-size: 30px;
   margin-right: 60px;
   color: white;
 }
-nav #drop{
-  color: #007bff;
-}
 
-nav #item{
-  color: white;
-  margin: 0 7px;
+nav .dropdown-item{
+  color: #007bff;
 }
