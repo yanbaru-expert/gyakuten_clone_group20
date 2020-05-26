@@ -22,7 +22,7 @@ namespace :import_csv do
       desc "MOVIE_CSVデータをインポートするタスク"
 
       task movie_data: :environment do
-        
+
         list = Import.csv_data(path: "db/csv_data/movie_data.csv")
 
 
@@ -51,5 +51,4 @@ namespace :import_csv do
         end
 
       end
-=======
 end
