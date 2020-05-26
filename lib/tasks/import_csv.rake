@@ -4,9 +4,9 @@ namespace :import_csv do
       desc "AWS_CSVデータをインポートするタスク"
     
       task aws_texts: :environment do
-        path = File.join Rails.root, "db/csv_data/aws_text_data.csv"
+       # path = File.join Rails.root, "db/csv_data/aws_text_data.csv"
         
-        list = Import.csv_data (path: "db/csv_data/aws_text_data.csv")
+        list = Import.csv_data(path: "db/csv_data/aws_text_data.csv")
    
        
         puts "インポート処理を開始"
