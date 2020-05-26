@@ -1,7 +1,7 @@
 require "import.rb"
 
 namespace :import_csv do
-      desc "AWS_CSVデータをインポートするタスク"
+      desc "aws_text_data.csvをインポートするタスク"
     
       task aws_texts: :environment do
        # path = File.join Rails.root, "db/csv_data/aws_text_data.csv"
@@ -17,5 +17,20 @@ namespace :import_csv do
           puts "インポートに失敗：UnknownAttributeError"
         end
       end
+
+      desc "question_data.csvをインポートするタスク"
     
+      task questions: :environment do
+        
+        list = Import.csv_data(path: "db/csv_data/question_data.csv")
+   
+       
+        puts "インポート処理を開始"
+        begin
+          Question.create!(list)
+          puts "インポート完了!!"
+        rescue ActiveModel::UnknownAttributeError => invalid
+          puts "インポートに失敗：UnknownAttributeError"
+        end
+      end
 end
