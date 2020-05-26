@@ -21,8 +21,6 @@ namespace :import_csv do
       desc "MOVIE_CSVデータをインポートするタスク"
 
       task movie_data: :environment do
-        path = File.join Rails.root, "db/csv_data/movie_data.csv"
-
         list = Import.csv_data(path: "db/csv_data/movie_data.csv")
 
 
