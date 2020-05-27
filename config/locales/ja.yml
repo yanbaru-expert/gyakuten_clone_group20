@@ -1,5 +1,16 @@
 ja:
   activerecord:
+    models:
+      movie: "動画"
+      aws_text: "AWSテキスト"
+      comment: "コメント"
+      admin_user: "管理者"
+    attributes:
+      movie:
+        title: "タイトル"
+      aws_text:
+        title: "タイトル"
+        content: "内容"      
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
