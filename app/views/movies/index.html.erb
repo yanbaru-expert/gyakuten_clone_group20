@@ -1,3 +1,8 @@
-<h1>TOPページ</h1>
-Bootstrap導入のテストでボタン配置しています
-<button type="button" class="btn btn-primary rounded-0">角ボタン</button>
+<div class="mt-5">
+    <div align="center">
+      <% @movies.each.with_index(1) do |movie, index| %>
+            <p><%= "Lv.#{index}：#{movie.title}" %></p>
+            <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% end %>
+    </div>
+</div>
