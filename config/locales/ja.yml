@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       movie: "動画"
-      aws_text: "テキスト"
+      aws_text: "AWSテキスト"
       comment: "コメント"
       admin_user: "管理者"
     attributes:
