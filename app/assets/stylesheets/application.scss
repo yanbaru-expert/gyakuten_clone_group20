@@ -54,25 +54,27 @@ nav .dropdown-item{
   margin: 20px 0 10px 0px;
 }
 
-.questions .card{
-  margin: 40px 0;
-  color: black;
-  border-radius: 10px;
-  border: solid 2px black;
-}
-
-.questions .card h3{
+.questions h3{
   font-size: 22px;
 }
 
-.questions .card p{
+.questions  p{
   color: #BBBBBB;
 }
 
-.questions a{
+.questions a {
+  background: white;
+  color: black;
+  transition: all .5s;
+  border: solid 2px black;
+  border-radius: 10px;
+  margin: 25px 0;
   text-decoration: none;
+  padding: 20px;
+  text-align: left;
 }
-
-.card-body{
-  padding: 15px 20px 30px 20px;
+.questions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  opacity: 0.7;
 }
