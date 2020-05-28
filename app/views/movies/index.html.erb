@@ -4,8 +4,10 @@
             <p><%= "Lv.#{index}：#{movie.title}" %></p>
             <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <% end %>
-      <div class="mx-auto" style="width: 100%;">
-        <%= paginate @movies %>
+      <div class='paginate-container'>
+          <div class="mx-auto" style="width: 400px;">
+            <%= paginate @movies %>
+          </div>
       </div>
     </div>
 </div>
