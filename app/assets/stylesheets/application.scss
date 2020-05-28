@@ -44,11 +44,35 @@ nav .dropdown-item{
   color: #007bff;
 }
 
+.aws_text {
+  font-size: 17px;
+}
+
 .aws_text h2{
   font-size: 30px;
   text-align: center;
   margin: 20px 0 10px 0px;
 }
-.aws_text table{
-  font-size: 17px;
+
+.questions .card{
+  margin: 40px 0;
+  color: black;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+
+.questions .card h3{
+  font-size: 22px;
+}
+
+.questions .card p{
+  color: #BBBBBB;
+}
+
+.questions a{
+  text-decoration: none;
+}
+
+.card-body{
+  padding: 15px 20px 30px 20px;
 }
