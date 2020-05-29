@@ -44,11 +44,37 @@ nav .dropdown-item{
   color: #007bff;
 }
 
+.aws_text {
+  font-size: 17px;
+}
+
 .aws_text h2{
   font-size: 30px;
   text-align: center;
   margin: 20px 0 10px 0px;
 }
-.aws_text table{
-  font-size: 17px;
+
+.questions h3{
+  font-size: 22px;
+}
+
+.questions  p{
+  color: #BBBBBB;
+}
+
+.questions a {
+  background: white;
+  color: black;
+  transition: all .5s;
+  border: solid 2px black;
+  border-radius: 10px;
+  margin: 25px 0;
+  text-decoration: none;
+  padding: 20px;
+  text-align: left;
+}
+.questions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  opacity: 0.7;
 }
