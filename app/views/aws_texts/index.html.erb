@@ -14,9 +14,11 @@
     <% @aws_texts.each.with_index(1) do |text,index| %>
       <tr>
         <td scope="row"><%= index %></td>
-        <td><a href="#"><%= link_to text.title, admin_aws_text_path(text.id) %></a></td>
+        <td><%= link_to text.title, aws_text_path(text.id) %></td>
+        
       </tr>
     <% end %>
+    
   </tbody>
 </table>
 </div>
