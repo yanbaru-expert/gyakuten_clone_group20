@@ -1,4 +1,2 @@
-<%
-  text = @aws_text.content
-%>
-<%= markdown(text).html_safe %>
+<h1><%= @aws_text.title %></h1>
+<%= markdown(@aws_text.content).html_safe %>
