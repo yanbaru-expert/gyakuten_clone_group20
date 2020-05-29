@@ -1,0 +1,14 @@
+<div class="questions">
+  <% @questions.each do |question| %>
+  <a href="" class="btn questions_content">
+          <div class="row">
+            <div class="col-md-7">
+              <h3><%= question.title %></h3>
+            </div>
+            <div class="col-md-5">
+              <p>質問日  <%= l question.created_at, format: :middle %></p>
+            </div>
+          </div>
+  </a>
+  <% end %>
+</div>
