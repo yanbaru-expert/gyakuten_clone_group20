@@ -6,7 +6,7 @@
               <h3><%= question.title %></h3>
             </div>
             <div class="col-md-5">
-              <p>質問日  <%= question.created_at.strftime('%Y年%m月%d日') %></p>
+              <p>質問日  <%= l question.created_at, format: :midle %></p>
             </div>
           </div>
   </a>
