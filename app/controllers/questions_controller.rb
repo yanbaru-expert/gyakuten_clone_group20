@@ -5,8 +5,15 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.create(question_params)
-    redirect_to action: :index
+    @question = Question.new(question_params)
+    if @question.save
+      flash[:notice] = "投稿しました。"
+      redirect_to action: :index
+    else
+      @questions = Question.all.order(created_at: :desc)
+      flash.now[:alert] = "投稿失敗しました。"
+      render :index
+    end
   end
 
   private
