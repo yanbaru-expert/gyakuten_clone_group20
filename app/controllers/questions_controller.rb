@@ -6,10 +6,10 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.create(question_params)
+    redirect_to action: :index
   end
 
   private
-
     def question_params
       params.require(:question).permit(:title, :detail)
     end
