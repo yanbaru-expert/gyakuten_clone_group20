@@ -19,6 +19,8 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views'
 gem 'activeadmin'
+gem 'redcarpet'
+gem 'coderay'
 gem 'kaminari'
 
 group :development, :test do

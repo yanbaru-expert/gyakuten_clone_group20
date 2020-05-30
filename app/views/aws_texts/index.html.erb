@@ -1,3 +1,4 @@
+
 <div class="aws_text">
 <h2>AWS講座</h2>
 <p>注意！！！：AWSのEC2やRDSは有料サービスとなります。無駄な料金を請求されないためにも、不要なインスタンスは停止・削除をしてください。</p>
@@ -13,9 +14,11 @@
     <% @aws_texts.each.with_index(1) do |text,index| %>
       <tr>
         <td scope="row"><%= index %></td>
-        <td><a href="#"><%= text.title %></a></td>
+        <td><%= link_to text.title, aws_text_path(text.id) %></td>
+        
       </tr>
     <% end %>
+    
   </tbody>
 </table>
 </div>

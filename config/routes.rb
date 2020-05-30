@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'movies#index'
   resources :movies, only: :index
-  get "/aws",to:"texts#index"
+  resources :aws_texts
   resources :questions, only: [:index, :create]
 end
