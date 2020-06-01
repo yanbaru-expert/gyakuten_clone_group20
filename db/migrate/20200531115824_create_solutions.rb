@@ -4,6 +4,7 @@ class CreateSolutions < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :detail
       t.timestamps
+      t.references :question, foreign_key: true
     end
   end
 end
