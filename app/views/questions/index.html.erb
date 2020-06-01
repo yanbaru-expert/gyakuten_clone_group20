@@ -15,7 +15,7 @@
 
 <div class="questions">
   <% @questions.each do |question| %>
-  <a href="" class="btn questions_content">
+    <a href="/questions/<%= question.id %>" class="btn questions_content">
           <div class="row">
             <div class="col-md-7">
               <h3><%= question.title %></h3>
