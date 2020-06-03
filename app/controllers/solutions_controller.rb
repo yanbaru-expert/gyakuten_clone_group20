@@ -1,6 +1,8 @@
 class SolutionsController < ApplicationController
   def create
-    @solution = Solution.new(solution_params)
+    @question = Question.find(params[:question_id])
+    @solution = @question.solutions.build(solution_params)
+
     if @solution.save
       redirect_back(fallback_location: questions_path)
     else
