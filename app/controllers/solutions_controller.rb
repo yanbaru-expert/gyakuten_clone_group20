@@ -4,8 +4,10 @@ class SolutionsController < ApplicationController
     @solution = @question.solutions.build(solution_params)
 
     if @solution.save
+      flash[:notice] = "投稿しました"
       redirect_back(fallback_location: questions_path)
     else
+      flash[:alert] = "投稿に失敗しました"
       redirect_back(fallback_location: questions_path)
     end
   end

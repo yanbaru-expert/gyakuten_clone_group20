@@ -11,8 +11,8 @@
 
 
 <div class="detail">
-  <% @solutions.each do |solution| %>
-    <h3>【回答】</h3>
+  <% @solutions.each.with_index(1) do |solution, index| %>
+    <h3>【回答<%= index %>】</h3>
     <%= markdown(solution.detail).html_safe %>
   <% end %>
 </div>
