@@ -11,6 +11,8 @@ ja:
       aws_text:
         title: "タイトル"
         content: "内容"
+      solution:
+        detail: "回答内容"
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

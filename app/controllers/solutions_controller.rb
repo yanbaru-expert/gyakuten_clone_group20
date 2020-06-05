@@ -7,8 +7,9 @@ class SolutionsController < ApplicationController
       flash[:notice] = "投稿しました"
       redirect_back(fallback_location: questions_path)
     else
-      flash.now[:alert] = "投稿に失敗しました。#{@solution.errors.full_messages}"
-      render "/questions/#{@solution.id}"
+      flash.now[:alert] = "投稿に失敗しました。"
+      @solutions = @question.solutions
+      render "questions/show"
     end
   end
 
