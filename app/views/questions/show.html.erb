@@ -19,6 +19,7 @@
 
 <h2>回答投稿</h2>
 <%= form_with(model:[@question, @solution],local: true, data: {confirm: "投稿しますか？"}) do |form| %>
+<%= render 'layouts/error_messages', model: form.object %>
   <div class="form-group">
       <%= form.label :detail, "【回答】" %>
       <%= form.text_area :detail, class: 'form-control', rows: "5" %>

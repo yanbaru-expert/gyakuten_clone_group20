@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
     else
       @questions = Question.all.order(created_at: :desc)
       flash.now[:alert] = "投稿失敗しました。"
-      render :index
+      render action: :index
     end
   end
 
