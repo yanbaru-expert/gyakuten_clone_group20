@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :create, :show] do
     resources :solutions, only: [:create]
   end
+  resources :phps, only: :index
 end
