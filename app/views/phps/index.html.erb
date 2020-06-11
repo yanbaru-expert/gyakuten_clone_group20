@@ -1,0 +1,10 @@
+<div class="mt-5">
+  <div align="center">
+    <div class="php_movie">
+      <% @phps.each do |php| %>
+        <p style ="font-size: 20px"><%= "#{php.title}" %></p>
+        <iframe width="560" height="315" src="<%= php.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% end %>
+    </div>
+  </div>
+</div>

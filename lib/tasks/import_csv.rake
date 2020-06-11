@@ -6,10 +6,10 @@ namespace :import_csv do
 
       task aws_texts: :environment do
         path = File.join Rails.root, "db/csv_data/aws_text_data.csv"
-        
+
         list = Import.csv_data(path: "db/csv_data/aws_text_data.csv")
-   
-       
+
+
         puts "インポート処理を開始"
         begin
           AwsText.create!(list)
@@ -18,6 +18,7 @@ namespace :import_csv do
           puts "インポートに失敗：UnknownAttributeError"
         end
       end
+
 
       desc "MOVIE_CSVデータをインポートするタスク"
 
@@ -35,6 +36,7 @@ namespace :import_csv do
         end
       end
 
+
       desc "question_data.csvをインポートするタスク"
 
       task questions: :environment do
@@ -50,5 +52,22 @@ namespace :import_csv do
           puts "インポートに失敗：UnknownAttributeError"
         end
 
+      end
+
+
+      desc "php_movie_data.csvをインポートするタスク"
+
+      task php_data: :environment do
+
+        list = Import.csv_data(path: "db/csv_data/php_movie_data.csv")
+
+        puts "インポート処理を開始"
+        begin
+          Php.create!(list)
+          puts "インポート完了"
+        rescue ActiveModel::UnknownAttributeError => invalid
+          puts "インポートに失敗：UnknownAttributeError"
+        end
+        
       end
 end
