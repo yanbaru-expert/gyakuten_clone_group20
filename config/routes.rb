@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :solutions, only: [:create]
   end
   resources :phps, only: :index
+  resources :monies, only: :index
 end
