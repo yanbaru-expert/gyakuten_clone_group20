@@ -84,6 +84,13 @@ ActiveRecord::Schema.define(version: 2020_06_12_103937) do
     t.index ["question_id"], name: "index_solutions_on_question_id"
   end
 
+  create_table "talks", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
