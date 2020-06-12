@@ -70,4 +70,21 @@ namespace :import_csv do
         end
         
       end
+
+
+      desc "talks_movie_data.csvをインポートするタスク"
+
+      task talks_data: :environment do
+
+        list = Import.csv_data(path: "db/csv_data/talks_movie_data.csv")
+
+        puts "インポート処理を開始"
+        begin
+          Talk.create!(list)
+          puts "インポート完了"
+        rescue ActiveModel::UnknownAttributeError => invalid
+          puts "インポートに失敗：UnknownAttributeError"
+        end
+        
+      end
 end

@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   root to: 'movies#index'
   resources :movies, only: :index
   resources :aws_texts
+  resources :talks, only: :index
   resources :questions, only: [:index, :create, :show] do
-    resources :solutions, only: [:create]
+  resources :solutions, only: [:create]
   end
   resources :phps, only: :index
 end
