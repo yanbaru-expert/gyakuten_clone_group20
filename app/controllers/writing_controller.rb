@@ -1,5 +1,5 @@
 class WritingController < ApplicationController
     def index
-        @writing = Writing.all
+        @writings = Writing.all
     end
 end

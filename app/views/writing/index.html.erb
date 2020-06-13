@@ -1,0 +1,8 @@
+<div class="mt-5">
+    <div class="text-center">
+        <% @writings.each do |writing| %>
+            <p><%= "#{writing.title}" %></p>
+            <iframe width="560" height="315" src="<%=writing.url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <% end %>
+    </div>
+</div>
