@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :movies, only: :index
   resources :aws_texts
   resources :talks, only: :index
+  resources :writing, only: :index
   resources :questions, only: [:index, :create, :show] do
   resources :solutions, only: [:create]
   end
