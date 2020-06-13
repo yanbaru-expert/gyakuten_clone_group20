@@ -1,10 +1,8 @@
 <div class="mt-5">
   <div align="center">
-    <div class="marketing-movie">
-      <% @marketings.each do |marketing| %>
-        <p style="font-size: 20px"><%= "#{marketing.title}" %></p>
+      <% @marketings.each.with_index(1) do |marketing,index| %>
+        <p style="font-size: 20px"><%= "Lv.#{index}:#{marketing.title}" %></p>
         <iframe src="<%= marketing.url %>" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
       <% end %>
-    </div>
   </div>
 </div>
