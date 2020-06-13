@@ -1,10 +1,12 @@
 
 <div class="mt-5">
     <div align="center">
-      <% @live_cordings.each do |live_cording| %>
-            <p><%= "#{live_cording.title}" %></p>
-            <iframe width="560" height="315" src="<%= live_cording.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <% end %>
+      <div class = "live_cording_movies">
+        <% @live_cordings.each do |live_cording| %>
+              <p><%= "#{live_cording.title}" %></p>
+              <iframe width="560" height="315" src="<%= live_cording.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <% end %>
+      </div>
       <div class="paginate-container">
           <div class="mx-auto" style="width: 400px;">
             <%= paginate @live_cordings %>
