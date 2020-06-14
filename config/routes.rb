@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
   resources :phps, only: :index
   resources :monies, only: :index
+  resources :live_cordings
 end
