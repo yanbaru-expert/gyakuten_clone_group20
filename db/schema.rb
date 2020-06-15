@@ -48,6 +48,21 @@ ActiveRecord::Schema.define(version: 2020_06_15_081917) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "lines", force: :cascade do |t|
+    t.string "genre"
+    t.string "title"
+    t.text "contents"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "live_cordings", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "marketings", force: :cascade do |t|
     t.string "title"
     t.string "url"
