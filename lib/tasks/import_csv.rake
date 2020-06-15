@@ -84,9 +84,7 @@ namespace :import_csv do
         rescue ActiveModel::UnknownAttributeError => invalid
           puts "インポートに失敗：UnknownAttributeError"
         end
-
       end
-
 
       desc "talks_movie_data.csvをインポートするタスク"
 

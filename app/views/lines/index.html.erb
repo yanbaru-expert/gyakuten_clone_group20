@@ -1,0 +1,22 @@
+<div class="line">
+<h2>LINE@</h2>
+<table class="table table-striped">
+  <thead>
+    <tr style="background-color:#28a745;">
+      <th scope="col" style="color:white">No.</th>
+      <th scope="col" style="color:white">ジャンル</th>
+      <th scope="col" style="color:white">内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lines.each.with_index(1) do |line,index| %>
+      <tr>
+        <td scope="row"><%= index %></td>
+        <td><%= line.genre %></td>
+        <td><%= link_to line.title , line_path(line.id), target: :_blank%></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+</div>
