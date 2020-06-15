@@ -2,6 +2,11 @@ module ApplicationHelper
   require "redcarpet"
   require "coderay"
 
+  def nav_color
+    controller_name == "lines" ? "#28a745" : "#5C99FF"
+  end
+
+
     class HTMLwithCoderay < Redcarpet::Render::HTML
         def block_code(code, language)
             language = language.split(':')[0] if language.present?
