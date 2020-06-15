@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
   resources :phps, only: :index
   resources :monies, only: :index
+  resources :marketings, only: :index
   resources :live_cordings
   resources :lines, only: [:index, :show]
 end
