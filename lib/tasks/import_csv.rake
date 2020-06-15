@@ -99,7 +99,7 @@ namespace :import_csv do
         rescue ActiveModel::UnknownAttributeError => invalid
           puts "インポートに失敗：UnknownAttributeError"
         end
-        
+
       end
       desc "live_cording_data.csvをインポートするタスク"
 
@@ -114,7 +114,7 @@ namespace :import_csv do
         rescue ActiveModel::UnknownAttributeError => invalid
           puts "インポートに失敗：UnknownAttributeError"
         end
-        
+
       end
 
 
@@ -127,6 +127,21 @@ namespace :import_csv do
         puts "インポート処理を開始"
         begin
           Writing.create!(list)
+          puts "インポート完了"
+        rescue ActiveModel::UnknownAttributeError => invalid
+          puts "インポートに失敗：UnknownAttributeError"
+        end
+      end
+
+      desc "line_data.csvをインポートするタスク"
+
+      task line_data: :environment do
+        
+        list = Import.csv_data(path: "db/csv_data/line_data.csv")
+
+        puts "インポート処理を開始"
+        begin
+          Line.create!(list)
           puts "インポート完了"
         rescue ActiveModel::UnknownAttributeError => invalid
           puts "インポートに失敗：UnknownAttributeError"
