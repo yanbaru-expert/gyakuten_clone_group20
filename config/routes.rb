@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :marketings, only: :index
   resources :live_cordings
   resources :lines, only: [:index, :show]
+  resources :edit_movies, only: :index
 end
