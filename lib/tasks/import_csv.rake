@@ -176,4 +176,18 @@ desc 'marketing_movie_data.csvをインポートするタスク'
       puts 'インポートに失敗：UnknownAttributeError'
     end
   end
+
+  desc 'text_data.csvをインポートするタスク'
+
+  task text_data: :environment do
+    list = Import.csv_data(path: 'db/csv_data/text_data.csv')
+
+    puts 'インポート処理を開始'
+    begin
+      Text.create!(list)
+      puts 'インポート完了'
+    rescue ActiveModel::UnknownAttributeError => e
+      puts 'インポートに失敗：UnknownAttributeError'
+    end
+  end
 end

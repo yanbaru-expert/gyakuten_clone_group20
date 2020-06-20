@@ -1,0 +1,23 @@
+<div class="text">
+  <h3 class="text-center">テキスト教材</h3>
+  <div class="input-group">
+	<input type="text" class="form-control" placeholder="テキスト入力欄">
+	<span class="input-group-btn">
+		<button type="button" class="btn btn-default">検索</button>
+	</span>
+</div>
+  <div class="text-contents">
+    <div class="container">
+    <% @texts.each do |text| %>
+      <div class="row">
+　　　　　　<div class="col-md-4">
+          <a href="/texts/<%= text.id %>" class="btn text_content">
+            <p><%= "#{text.title}" %></p>
+            <p><%= "#{text.genre}】" %></p>
+            </a>
+          <% end %>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
