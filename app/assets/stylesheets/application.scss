@@ -1,7 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
 main {
-  max-width: 700px;
+  max-width: 992px;
   margin: 0 auto;
   padding: 1rem;
   padding-bottom: 50px;
@@ -121,6 +121,28 @@ nav .dropdown-item{
   padding: 120px 0 80px 0;
   width: 450px;
   margin: 0 auto;
+}
+
+.card-body {
+  width: 250px;
+  height: 160px;
+}
+
+.text {
+  padding: 40px 0 20px 0;
+}
+.text-show {
+  padding: 120px 0 80px 0;
+  text-align: left;
+  font-size: 20px;
+}
+
+.text-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.form-control {
+  width:100px;
 }
 .footer{
   position: fixed;
