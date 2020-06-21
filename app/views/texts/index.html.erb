@@ -7,10 +7,12 @@
     </span>
   </div>
 <div class="container">
+
   <div class="row">
     <div class="card-deck">
-      <div class="col-md-4">
         <% @texts.each do |text| %>
+      <div class="col-md-4">
+
           <a href="/texts/<%= text.id %>" class="btn text_content">
             <div class="card">
               <img class="card-img" src="/assets/no_image.jpeg" ait="サンプル画像">
@@ -19,9 +21,10 @@
                 <p class="card-text"><%= "【#{text.genre}】" %></p>
               </div>
             </div>
-          <% end %>
         </a>
       </div>
+        <% end %>
     </div>
   </div>
+
 </div>
