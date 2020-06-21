@@ -1,7 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
 main {
-  max-width: 700px;
+  max-width: 992px;
   margin: 0 auto;
   padding: 1rem;
   padding-bottom: 50px;
@@ -123,6 +123,9 @@ nav .dropdown-item{
   margin: 0 auto;
 }
 
+.container {
+  display:flex;
+}
 
 .footer{
   position: fixed;
