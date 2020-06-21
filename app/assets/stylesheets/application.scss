@@ -129,7 +129,20 @@ nav .dropdown-item{
 }
 
 .text {
-  text-align: center;
+  padding: 40px 0 20px 0;
+}
+.text-show {
+  padding: 120px 0 80px 0;
+  text-align: left;
+  font-size: 20px;
+}
+
+.text-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.form-control {
+  width:100px;
 }
 .footer{
   position: fixed;

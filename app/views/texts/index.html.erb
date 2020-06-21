@@ -1,11 +1,12 @@
 <div class="text">
-  <h3 class="text-center">テキスト教材</h3>
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="テキスト入力欄">
+    <input type="text" class="form-control" placeholder="テキスト入力欄" style="width:100px;">
     <span class="input-group-btn">
       <button type="button" class="btn btn-default"></button>
     </span>
   </div>
+  <h3 class="text-center">テキスト教材</h3>
+
 <div class="container">
 
   <div class="row">
@@ -13,7 +14,7 @@
         <% @texts.each do |text| %>
       <div class="col-md-4">
 
-          <a href="/texts/<%= text.id %>" class="btn text_content">
+          <a target="_blank" href="/texts/<%= text.id %>" class="btn text_content">
             <div class="card">
               <img class="card-img" src="/assets/no_image.jpeg" ait="サンプル画像">
               <div class="card-body">
