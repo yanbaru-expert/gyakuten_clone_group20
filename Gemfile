@@ -22,7 +22,7 @@ gem 'activeadmin'
 gem 'redcarpet'
 gem 'coderay'
 gem 'kaminari'
-
+gem 'impressionist'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

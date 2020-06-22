@@ -1,7 +1,12 @@
 class QuestionsController < ApplicationController
+  impressionist :actions => [:index]
+  impressionist unique: [:session_hash]
+
+
   def index
     @questions = Question.all.order(id: "DESC")
     @question = Question.new
+    impressionist(@question, nil ,unique: [:session_hash])
   end
 
   def create
