@@ -1,14 +1,13 @@
 class QuestionsController < ApplicationController
-  impressionist :actions => [:index]
+  impressionist :actions => [:show]
   impressionist unique: [:session_hash]
 
 
   def index
     @questions = Question.all.order(id: "DESC")
     @question = Question.new
-    impressionist(@question, nil ,unique: [:session_hash])
   end
-
+  
   def create
     @question = Question.new(question_params)
     if @question.save
@@ -20,10 +19,11 @@ class QuestionsController < ApplicationController
       render action: :index
     end
   end
-
+  
   def show
     @question = Question.find(params[:id])
     @solution = Solution.new
+    impressionist(@question, nil ,unique: [:session_hash])
     @solutions = @question.solutions
   end
 
