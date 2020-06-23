@@ -1,7 +1,5 @@
 class QuestionsController < ApplicationController
   
-
-
   def index
     @questions = Question.all.order(id: "DESC")
     @question = Question.new
@@ -25,13 +23,8 @@ class QuestionsController < ApplicationController
     @question.display_count +=1
     @question.save!
     @solutions = @question.solutions
-
   end
 
-
-
-
-  
   private
     def question_params
       params.require(:question).permit(:title, :detail)
