@@ -1,6 +1,5 @@
 class QuestionsController < ApplicationController
-  impressionist :actions => [:show]
-  impressionist unique: [:session_hash]
+  
 
 
   def index
@@ -23,10 +22,16 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @solution = Solution.new
-    impressionist(@question, nil ,unique: [:session_hash])
+    @question.display_count +=1
+    @question.save!
     @solutions = @question.solutions
+
   end
 
+
+
+
+  
   private
     def question_params
       params.require(:question).permit(:title, :detail)
