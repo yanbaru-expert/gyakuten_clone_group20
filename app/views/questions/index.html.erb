@@ -22,6 +22,7 @@
             </div>
             <div class="col-md-5">
               <p>質問日  <%= l question.created_at, format: :middle %></p>
+              <p><%= pluralize(question.display_count, "View",locale: :en) %></p>
             </div>
           </div>
   </a>
