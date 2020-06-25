@@ -16,7 +16,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   # 変換したファイルのファイル名の規則
   def filename
-    "#{Time.zone.now.strftime('%Y%m%d%H%M%S')}.jpg" if original_filename.present?
+    "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
+  protected
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
   end
 
   def default_url(*args)
