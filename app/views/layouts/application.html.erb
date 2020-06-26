@@ -15,7 +15,7 @@
     <%= render "layouts/header" %>
     <%= render "layouts/flash_messages" %>
   </header>
-  <main style=max-width:<%= controller.controller_name == "texts" ? "1350" : "700"%>px; >
+  <main style=max-width:<%= controller.controller_name == "texts" && controller.action_name == "index" ? "1350" : "700"%>px;>
     <%= yield %>
   </main>
   <footer>
