@@ -5,6 +5,8 @@ ja:
       aws_text: "AWSテキスト"
       comment: "コメント"
       admin_user: "管理者"
+      question: "質問集"
+      text: "テキスト"
     attributes:
       movie:
         title: "タイトル"
