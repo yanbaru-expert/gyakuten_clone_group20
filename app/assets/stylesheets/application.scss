@@ -126,6 +126,13 @@ nav .dropdown-item{
   width: 100%;
   height: 100%;
 }
+.card{
+  margin: 20px 0;
+}
+.card-img{
+  width: 400px;
+  height: 180px;
+}
 .card-body {
   height: 160px;
   background-color: #f7f7f7;
@@ -143,6 +150,7 @@ nav .dropdown-item{
 .text {
   padding: 60px 0 20px 0;
 }
+
 .text input{
   padding: 10px 0;
   margin-bottom: 20px;
