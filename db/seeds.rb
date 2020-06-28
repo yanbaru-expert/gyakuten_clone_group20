@@ -13,3 +13,16 @@ AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |adminuser|
   adminuser.password = ADMIN_PASSWORD
   puts '管理者の初期データインポートに成功しました。'
 end
+
+system("rake import_csv:aws_texts")
+system("rake import_csv:edit_movie_data")
+system("rake import_csv:line_data")
+system("rake import_csv:live_cording_data")
+system("rake import_csv:marketings_data")
+system("rake import_csv:money_data")
+system("rake import_csv:movie_data")
+system("rake import_csv:php_data")
+system("rake import_csv:questions")
+system("rake import_csv:talks_data")
+system("rake import_csv:text_data")
+system("rake import_csv:writing_data")
