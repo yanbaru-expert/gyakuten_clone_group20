@@ -1,13 +1,24 @@
-<div class="mt-5">
-    <div align="center">
-      <% @movies.each.with_index(@movies.offset_value + 1) do |movie, index| %>
-            <p><%= "Lv.#{index}：#{movie.title}" %></p>
-            <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <% end %>
-      <div class="paginate-container">
-          <div class="mx-auto" style="width: 400px;">
-            <%= paginate @movies %>
-          </div>
+<div class="movie-content">
+    <div class="container-fluid">
+      <div class="row">
+          <% @movies.each.with_index(@movies.offset_value + 1) do |movie, index| %>
+         <div class="col-md-4">
+            <div class="card">
+              <iframe src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="card-body">
+
+                <%= link_to "#{movie.button}", "/movies/#{movie.id}", method: :patch, class:"btn " %>
+
+                <h4 class="card-title"><%= "Lv.#{index}：#{movie.title}" %></h4>
+              </div>
+            </div>
+         </div>
+          <% end %>
       </div>
     </div>
-</div>
+    <div class="paginate-container">
+        <div class="mx-auto" style="width: 400px;">
+          <%= paginate @movies %>
+        </div>
+    </div>
+  </div>
