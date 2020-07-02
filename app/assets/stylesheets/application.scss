@@ -47,23 +47,6 @@ nav .dropdown-item{
   color: #007bff;
 }
 
-.movie-content{
- padding: 50px 0;
-}
-
-.movie-content .card{
-  border: solid 1px black;
-  margin: 20px 0;
-  height: 450px;
-  width: 410px;
-}
-.movie-content iframe{
-  height: 250px;
-}
-.movie-content h4{
-  font-size: 27px;
-}
-
 .aws_text {
   font-size: 17px;
 }
@@ -198,10 +181,4 @@ nav .dropdown-item{
   a{
     padding-left: 40px;
   }
-}
-.movie-content .btn{
-  width: 100%;
-  margin:20px 0;
-  background-color: #6c757d;
-  color: white;
 }
