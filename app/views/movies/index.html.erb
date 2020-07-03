@@ -7,11 +7,9 @@
               <iframe src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <div class="card-body">
 
-                <% if @watched_movies_id.include?(movie.id) %>
-                  <%= link_to '視聴済みを解除する', movie_watched_movie_path(movie, movie), method: :delete, remote: true, class:"btn" %>
-                  <% else %>
-                  <%= link_to '視聴済みにする', movie_watched_movies_path(movie), method: :post, remote: true, class:"btn" %>
-                <% end %>
+                <div id="watched_movie_<%= movie.id %>">
+                   <%= render partial: 'movies/movie', locals: { movie: movie} %>
+                </div>
 
                 <h4 class="card-title"><%= "Lv.#{index}：#{movie.title}" %></h4>
               </div>
