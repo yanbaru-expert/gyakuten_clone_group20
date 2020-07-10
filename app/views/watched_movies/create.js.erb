@@ -1,1 +1,1 @@
-$("#watched_movie_<%= @movie.id %>").html("<%= j(render partial: 'movies/movie', locals: { movie: @movie}) %>");
+$("#watched_movie_<%= @movie.id %>").html("<%= j(render partial: 'movies/movie', locals: { movie: @movie, watched_movies_id: @watched_movies_id}) %>");
