@@ -199,9 +199,16 @@ nav .dropdown-item{
 .movie-content h4{
   font-size: 27px;
 }
-.movie-content .btn {
+
+.movie-content .unwatched{
   width: 100%;
   margin:20px 0;
   background-color: #6c757d;
+  color: white;
+}
+.movie-content .watched{
+  width: 100%;
+  margin:20px 0;
+  background-color: #007bff;;
   color: white;
 }
