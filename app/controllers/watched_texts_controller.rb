@@ -8,6 +8,8 @@ class WatchedTextsController < ApplicationController
     current_user.watched_texts.find_by(text_id: params[:text_id]).destroy!
   end
 
+  private
+
   def set_post
     @text = Text.find(params[:text_id])
     @watched_texts_id = current_user.watched_texts.pluck(:text_id)
