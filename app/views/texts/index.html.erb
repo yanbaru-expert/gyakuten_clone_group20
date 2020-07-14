@@ -1,28 +1,33 @@
 <div class="text">
+  <h3 class="text-center">テキスト教材</h3>
   <div class="input-group justify-content-center">
     <input type="text" placeholder="　教材を探す" style="width:30%;">
     <span class="input-group-btn">
       <button type="button" class="btn btn-default"></button>
     </span>
   </div>
-  <h3 class="text-center">テキスト教材</h3>
+</div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <% @texts.each do |text| %>
-       <div class="col-md-4">
-         <a target="_blank" href="/texts/<%= text.id %>" class="btn text_content">
-          <div class="card">
-            <%= image_tag text.image_url(:thumb) ,class:"card-img" %>
-            <div class="card-body">
-              <h4 class="card-title"><%= "#{text.title}" %></h4>
-              <p class="card-text"><%= "【#{text.genre}】" %></p>
+
+<div class="text-content">
+    <div class="container-fluid">
+      <div class="row">
+          <% @texts.each do |text| %>
+         <div class="col-md-4">
+            <div class="card">
+              <%= image_tag text.image_url(:thumb) ,class:"card-img" %>
+              <div class="card-body">
+
+                <div id="watched_text_<%= text.id %>" class="text_button" >
+                  <%= render partial: "texts/text", locals: { text: text} %>
+                </div>
+
+                <h4 class="card-title"><%= "#{text.title}" %></h4>
+                <p class="card-text"><%= "【#{text.genre}】" %></p>
+              </div>
             </div>
-          </div>
-         </a>
-       </div>
+         </div>
           <% end %>
+      </div>
     </div>
   </div>
-
-</div>
