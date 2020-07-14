@@ -22,12 +22,14 @@ Bundler.require(*Rails.groups)
 module GyakutenCloneGroup
   class Application < Rails::Application
     config.load_defaults 6.0
-    
+
     config.generators.system_tests = nil
     #時間を東京に設定
     config.time_zone = "Tokyo"
     config.active_record.default_timezone = :local
     #日本語に設定
     config.i18n.default_locale = :ja
+    # 認証トークンをremoteフォームに埋め込む
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
