@@ -1,0 +1,5 @@
+<% if @watched_texts_id.include?(text.id) %>
+  <%= render partial: "texts/watched", locals: { text: text} %>
+<% else %>
+  <%= render partial: "texts/unwatched", locals: { text: text} %>
+<% end %>

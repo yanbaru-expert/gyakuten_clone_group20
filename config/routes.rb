@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   resources :live_cordings
   resources :lines, only: [:index, :show]
   resources :edit_movies, only: :index
-  resources :texts, only: [:index, :show]
+  resources :texts, only: [:index, :show] do
+    resource :watched_texts, only: [:create, :destroy]
+  end
 end
