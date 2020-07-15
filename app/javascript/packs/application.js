@@ -5,16 +5,19 @@ require("channels")
 require("bootstrap/dist/js/bootstrap")
 
 $(function () {
-    searchText = $(this).val();
-    $('.card-title').each(function() {
-        if($(this).text.indexOf(searchText) != -1){
-            $(this).removeClass("d-none")
-            $(this).addClass("d-flex")
-        }
-        else{
-            $(this).removeClass("d-flex")
-            $(this).addClass("d-none")
-        }
+    $document.getElementById('search-text').keyup(function(){
+      var searchText = $(this).val();
+        $('.card-title').each(function() {
+            if($(this).text().indexOf(searchText) != -1){
+                console.log(text)
+                $(this).document.getElementById('text').removeClass("d-none")
+                $(this).document.getElementById('text').addClass("d-flex")
+            }
+            else{
+                $(this).document.getElementById('text').removeClass("d-flex")
+                $(this).document.getElementById('text').addClass("d-none")
+            }
+        });
     });
 });
 
