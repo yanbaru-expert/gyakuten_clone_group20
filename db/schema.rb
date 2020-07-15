@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_090207) do
+ActiveRecord::Schema.define(version: 2020_07_14_045335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -150,6 +150,26 @@ ActiveRecord::Schema.define(version: 2020_07_02_090207) do
     t.index ["movie_id"], name: "index_watched_movies_on_movie_id"
     t.index ["user_id", "movie_id"], name: "index_watched_movies_on_user_id_and_movie_id", unique: true
     t.index ["user_id"], name: "index_watched_movies_on_user_id"
+  end
+
+  create_table "watched_phps", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "php_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["php_id"], name: "index_watched_phps_on_php_id"
+    t.index ["user_id", "php_id"], name: "index_watched_phps_on_user_id_and_php_id", unique: true
+    t.index ["user_id"], name: "index_watched_phps_on_user_id"
+  end
+
+  create_table "watched_texts", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "text_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["text_id"], name: "index_watched_texts_on_text_id"
+    t.index ["user_id", "text_id"], name: "index_watched_texts_on_user_id_and_text_id", unique: true
+    t.index ["user_id"], name: "index_watched_texts_on_user_id"
   end
 
   create_table "writings", force: :cascade do |t|

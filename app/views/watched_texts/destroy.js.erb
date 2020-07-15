@@ -1,0 +1,1 @@
+$("#watched_text_<%= @text.id %>").html("<%= j(render partial: "texts/unwatched", locals: { text: @text}) %>")
