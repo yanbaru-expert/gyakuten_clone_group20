@@ -15,7 +15,7 @@
     <div class="container-fluid">
       <div class="row">
           <% @texts.each do |text| %>
-         <div class="col-md-4">
+         <div class="col-md-4 d-flex" id="text">
             <div class="card">
               <%= image_tag text.image_url(:thumb) ,class:"card-img" %>
               <div class="card-body">
